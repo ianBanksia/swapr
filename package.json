@@ -1,0 +1,33 @@
+{
+  "name": "swapr",
+  "type2": "module",
+  "version": "0.0.2",
+  "author": {
+    "name": "Pascal Belloncle",
+    "email": "psq@nanorails.com"
+  },
+  "repository": "https://github.com/psq/swapr.git",
+  "private": false,
+  "main": "lib/index",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "mocha 'test/unit/*.js'",
+    "swapr": "mocha 'test/integration/swapr-integration.js'"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-string": "^1.5.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.3.2"
+  },
+  "dependencies": {
+    "@blockstack/clarity": "^0.3.11",
+    "@blockstack/clarity-cli": "^0.3.11",
+    "@stacks/transactions": "^1.3.5",
+    "bn.js": "^5.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
