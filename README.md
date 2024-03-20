@@ -2,6 +2,14 @@
 
 An exploration on how to implement an automated token exchange modeled after [Uniswap](https://uniswap.exchange) in Clarity for [Stacks 2.0](https://github.com/blockstack/stacks-blockchain)
 
+This is a 2nd iteration of this project, aimed to adjust any details for the upcoming Nakamoto Release and also provide a broader code base for the students at Griffith Univeristy.
+
+
+Please find below original Readme (by @psq)
+
+
+
+# Original Readme
 Of special interest, reading the [x-y-k paper](https://github.com/runtimeverification/verified-smart-contracts/blob/uniswap/uniswap/x-y-k.pdf) and [V2 whitepaper](https://uniswap.org/whitepaper.pdf) would provide some background on understanding how things work (some things have been simplified, notably the initial burning of 1000 times the minimum pool share to prevent attacks right after the first addition to the liquidity pool).
 
 Basically, when doing an exchange, the contract will maintain the invariant `(amount of tokenx) * (amount of tokeny) = k`, or for short `x * y = k`, so when exchanging `dx` for `dy`, you need to also have `(x + dx) * (y - dy) = k`.  Of course if dx is close to x, the total liquidity available, the exchange rate will not be favorable.  Liquidity providers earn a small fee (25 to 30 basis points whether the operator takes a cut of 5 basis points or not).
